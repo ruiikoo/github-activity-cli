@@ -1,21 +1,12 @@
-import requests
+from github_api import get_user_events
+from formatter import format_event
 
 username = input("Enter GitHub username: ")
-url = f"https://api.github.com/users/{username}/events"
-response = requests.get(url)
-event_messages = {
-    "PushEvent": "Pushed commits",
-    "IssueCommentEvent": "Commented on an issue",
-    "PullRequestEvent": "Created a pull request"
-}
 
-if response.status_code == 200:
-    events = response.json()
-    for event in events:
-        event_type = event['type']
-        message = event_messages.get(event_type, "Unknown activity")
-        print(
-            f"{message} in {event['repo']['name']} at {event['created_at']}."
-        )
+events = get_user_events(username)
+
+if events is None:
+    print("Error: Unable to fetch GitHub activity.")
 else:
-    print(f"Error: {response.status_code}")
+    for event in events:
+        print(format_event(event))
