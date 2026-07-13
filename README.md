@@ -17,9 +17,10 @@ This is a CLI application that retrieves and displays recent GitHub activity for
 - GitHub REST API;
 - Git.
 
-## Clone the repository and install the dependencies:
-git clone <repository-url>
-cd github_activity
+## For installation run the commands below in the corresponding sequence:
+```bash
+git clone https://github.com/ruiikoo/github-activity-cli.git
+cd github-activity-cli
 
 python -m venv .venv
 source .venv/bin/activate
