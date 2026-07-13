@@ -1,5 +1,8 @@
 ## GitHub User Activity Tracker CLI
 
+## Rpoject page URL:
+https://github.com/ruiikoo/github-activity-cli
+
 ## Description:
 This is a CLI application that retrieves and displays recent GitHub activity for any public GitHub user using the GitHub Events API.
 
