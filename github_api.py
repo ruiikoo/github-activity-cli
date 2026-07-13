@@ -5,6 +5,6 @@ def get_user_events(username):
     response = requests.get(url)
 
     if response.status_code == 200:
-        return response.json()
+        return response.json(), response.status_code
     else:
-        return None
+        return None, response.status_code
