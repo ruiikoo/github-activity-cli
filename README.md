@@ -26,23 +26,30 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -r requirements.txt
+```
 
 ## To run the app:
+```bash
 python main.py
+```
 Type in the GitHub 'username' you want to get the recent activity of.
 
 ## Example:
 Input:
+```bash
 Enter GitHub username: torvalds
-
+```
 Output:
+```bash
 Recent activity for @torvalds (30 events):
 
 • Pushed commits
   Repository: torvalds/linux
   Time: Jul 12, 2026 19:32 UTC
+```
 
 ## Project Structure:
+```bash
 github_activity/
 │
 ├── main.py          # Application entry point
@@ -50,3 +57,4 @@ github_activity/
 ├── formatter.py     # Event formatting logic
 ├── requirements.txt # Dependencies
 └── .gitignore       # Ignored files
+```
